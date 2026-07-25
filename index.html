@@ -300,6 +300,13 @@
     text-align:center;
     padding:10px;
     line-height:1.4;
+    overflow:hidden;
+  }
+  .tag .swatch img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:12px;
   }
   .tag .cap{
     font-size:13px; font-weight:700; color:var(--primary-dark);
@@ -475,6 +482,13 @@
     color:rgba(255,255,255,0.92);
     padding:14px;
     line-height:1.5;
+    overflow:hidden;
+  }
+  .g-tag .ph img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:10px;
   }
   .g-tag:nth-child(1) .ph{background:linear-gradient(160deg,var(--primary),#2d6a5c);}
   .g-tag:nth-child(2) .ph{background:linear-gradient(160deg,var(--accent),var(--accent-dark));}
@@ -729,15 +743,15 @@
 
     <div class="tag-cluster">
       <div class="tag tag-a">
-        <div class="swatch">📷 Foto do espaço da loja aqui</div>
+        <div class="swatch"><img src="1.jpeg" alt="Espaço da loja Pet Ville" loading="lazy"></div>
         <div class="cap">Nosso espaço</div>
       </div>
       <div class="tag tag-b">
-        <div class="swatch">📷 Foto de um pet feliz pós-banho</div>
+        <div class="swatch"><img src="2.jpeg" alt="Pet feliz após o banho na Pet Ville" loading="lazy"></div>
         <div class="cap">Banho & Tosa</div>
       </div>
       <div class="tag tag-c">
-        <div class="swatch">📷 Foto do consultório / equipe</div>
+        <div class="swatch"><img src="3.jpeg" alt="Consultório veterinário da Pet Ville" loading="lazy"></div>
         <div class="cap">Consultório</div>
       </div>
       <div class="rating-float">
@@ -858,10 +872,10 @@
     </div>
     <div class="gallery-line">
       <div class="gallery-grid">
-        <div class="g-tag reveal"><div class="ph">📷 Foto: banho e tosa</div><div class="cap">Banho & Tosa</div></div>
-        <div class="g-tag reveal" style="transition-delay:.06s"><div class="ph">📷 Foto: cantinho da loja</div><div class="cap">Nossa loja</div></div>
-        <div class="g-tag reveal" style="transition-delay:.12s"><div class="ph">📷 Foto: pet feliz</div><div class="cap">Clientes de quatro patas</div></div>
-        <div class="g-tag reveal" style="transition-delay:.18s"><div class="ph">📷 Foto: consultório</div><div class="cap">Consultório</div></div>
+        <div class="g-tag reveal"><div class="ph"><img src="4.jpeg" alt="Banho e tosa na Pet Ville" loading="lazy"></div><div class="cap">Banho & Tosa</div></div>
+        <div class="g-tag reveal" style="transition-delay:.06s"><div class="ph"><img src="5.jpeg" alt="Cantinho da loja Pet Ville" loading="lazy"></div><div class="cap">Nossa loja</div></div>
+        <div class="g-tag reveal" style="transition-delay:.12s"><div class="ph"><img src="6.jpeg" alt="Pet cliente feliz na Pet Ville" loading="lazy"></div><div class="cap">Clientes de quatro patas</div></div>
+        <div class="g-tag reveal" style="transition-delay:.18s"><div class="ph"><img src="7.jpeg" alt="Consultório da Pet Ville" loading="lazy"></div><div class="cap">Consultório</div></div>
       </div>
     </div>
   </div>
