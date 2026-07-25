@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Ville — Banho, Tosa e Consultório Veterinário em Dourados/MS</title>
+<meta name="description" content="Pet Ville: banho, tosa e consultório veterinário em Dourados/MS. Nota 4,4 no Google com mais de 200 avaliações. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F5F7F1;
+    --bg-alt: #EAF0E4;
+    --panel: #FFFFFF;
+    --ink: #16302B;
+    --ink-soft: #4A5F58;
+    --primary: #1F4C43;
+    --primary-dark: #12332C;
+    --accent: #EDA23D;
+    --accent-dark: #D6862A;
+    --rose: #D9738A;
+    --tag: #FBEFD9;
+    --line: rgba(22,48,43,0.12);
+    --radius: 22px;
+    --shadow: 0 20px 45px -20px rgba(18,51,44,0.35);
+    --wa: #25D366;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Bricolage Grotesque',sans-serif;
+    color:var(--primary-dark);
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent-dark);
+    font-weight:700;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px;height:2px;
+    background:var(--accent-dark);
+    display:inline-block;
+  }
+
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  section{position:relative;}
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  .visible-focus:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+    outline: 3px solid var(--accent-dark);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 26px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:15px;
+    text-decoration:none;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    font-family:'Inter',sans-serif;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--wa);
+    color:#fff;
+    box-shadow:0 14px 28px -10px rgba(37,211,102,0.55);
+  }
+  .btn-primary:hover{background:#1fb857;}
+  .btn-ghost{
+    background:transparent;
+    border-color:var(--primary-dark);
+    color:var(--primary-dark);
+  }
+  .btn-ghost:hover{background:var(--primary-dark); color:#fff;}
+  .btn-light{
+    background:#fff;
+    color:var(--primary-dark);
+  }
+  .btn-light:hover{background:var(--tag);}
+
+  /* ---------- Nav ---------- */
+  header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    background:rgba(245,247,241,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, box-shadow .3s ease, padding .3s ease;
+    padding:18px 0;
+  }
+  header.scrolled{
+    border-color:var(--line);
+    box-shadow:0 8px 24px -18px rgba(0,0,0,0.25);
+    padding:10px 0;
+  }
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;
+    font-size:22px;
+    color:var(--primary-dark);
+    text-decoration:none;
+  }
+  .logo .paw{width:30px; height:30px; color:var(--accent-dark);}
+  .nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    margin:0; padding:0;
+    font-weight:600;
+    font-size:14.5px;
+  }
+  .nav-links a{
+    text-decoration:none;
+    color:var(--ink);
+    position:relative;
+    padding-bottom:4px;
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute; left:0; bottom:0;
+    width:0; height:2px;
+    background:var(--accent-dark);
+    transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex; align-items:center; gap:18px;}
+  .nav-cta .btn{padding:11px 20px; font-size:13.5px;}
+  .burger{
+    display:none;
+    background:none; border:none; cursor:pointer;
+    width:40px;height:40px;
+    align-items:center; justify-content:center;
+  }
+  .burger span{
+    display:block; width:22px; height:2px; background:var(--primary-dark);
+    position:relative;
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .burger span::before,.burger span::after{
+    content:""; position:absolute; left:0; width:22px; height:2px; background:var(--primary-dark);
+    transition:transform .25s ease, top .25s ease;
+  }
+  .burger span::before{top:-7px;}
+  .burger span::after{top:7px;}
+  .burger.open span{background:transparent;}
+  .burger.open span::before{top:0; transform:rotate(45deg);}
+  .burger.open span::after{top:0; transform:rotate(-45deg);}
+
+  .mobile-panel{
+    display:none;
+    position:fixed; top:64px; left:0; right:0; bottom:0;
+    background:var(--bg);
+    z-index:99;
+    padding:30px 28px;
+    flex-direction:column;
+    gap:22px;
+    font-size:19px;
+    font-weight:700;
+    overflow-y:auto;
+  }
+  .mobile-panel a{text-decoration:none; color:var(--primary-dark);}
+  .mobile-panel.open{display:flex;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:150px 0 90px;
+    background:
+      radial-gradient(circle at 85% 8%, rgba(237,162,61,0.16), transparent 45%),
+      radial-gradient(circle at 8% 85%, rgba(217,115,138,0.14), transparent 40%);
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(34px, 4.6vw, 54px);
+    line-height:1.06;
+    font-weight:800;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--accent-dark);
+    background:linear-gradient(180deg, transparent 62%, rgba(237,162,61,0.35) 62%);
+  }
+  .hero p.lead{
+    margin-top:22px;
+    font-size:18px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    max-width:480px;
+  }
+  .hero-ctas{
+    margin-top:34px;
+    display:flex; gap:16px; flex-wrap:wrap;
+  }
+  .trust-row{
+    margin-top:38px;
+    display:flex;
+    gap:26px;
+    flex-wrap:wrap;
+  }
+  .trust-item{
+    display:flex; align-items:center; gap:10px;
+    font-size:13.5px; font-weight:600; color:var(--ink-soft);
+  }
+  .trust-item svg{width:20px; height:20px; color:var(--accent-dark); flex-shrink:0;}
+  .stars{color:var(--accent-dark); letter-spacing:2px; font-size:15px;}
+
+  /* Tag cluster visual */
+  .tag-cluster{
+    position:relative;
+    height:460px;
+  }
+  .tag{
+    position:absolute;
+    width:230px;
+    background:var(--panel);
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .tag::before{
+    content:"";
+    position:absolute;
+    top:-14px; left:50%;
+    transform:translateX(-50%);
+    width:26px; height:26px;
+    border-radius:50%;
+    border:5px solid var(--bg);
+    background:var(--primary);
+    box-shadow:0 0 0 2px rgba(22,48,43,0.18);
+  }
+  .tag .swatch{
+    width:100%; height:130px;
+    border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    color:rgba(255,255,255,0.9);
+    font-family:'Space Mono',monospace;
+    font-size:11.5px;
+    text-align:center;
+    padding:10px;
+    line-height:1.4;
+  }
+  .tag .cap{
+    font-size:13px; font-weight:700; color:var(--primary-dark);
+  }
+  .tag-a{top:0; left:20px; transform:rotate(-7deg); z-index:3;}
+  .tag-a .swatch{background:linear-gradient(135deg,var(--primary),#2d6a5c);}
+  .tag-b{top:150px; left:230px; transform:rotate(5deg); z-index:2;}
+  .tag-b .swatch{background:linear-gradient(135deg,var(--accent),var(--accent-dark));}
+  .tag-c{top:290px; left:10px; transform:rotate(4deg); z-index:1;}
+  .tag-c .swatch{background:linear-gradient(135deg,var(--rose),#b85068);}
+
+  .rating-float{
+    position:absolute;
+    right:0; bottom:10px;
+    background:var(--primary-dark);
+    color:#fff;
+    border-radius:18px;
+    padding:16px 20px;
+    box-shadow:var(--shadow);
+    display:flex; align-items:center; gap:14px;
+    z-index:4;
+  }
+  .rating-float .num{font-family:'Bricolage Grotesque',sans-serif; font-size:30px; font-weight:800;}
+  .rating-float .meta{font-size:12px; font-family:'Space Mono',monospace; opacity:0.85; line-height:1.5;}
+
+  /* ---------- Section headers ---------- */
+  .sec-head{max-width:640px; margin-bottom:50px;}
+  .sec-head h2{font-size:clamp(28px,3.4vw,40px); margin-top:14px; font-weight:800; line-height:1.15;}
+  .sec-head p{margin-top:16px; color:var(--ink-soft); font-size:16.5px; line-height:1.6;}
+  .band{padding:100px 0;}
+  .band.alt{background:var(--bg-alt);}
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .svc-card{
+    background:var(--panel);
+    border-radius:var(--radius);
+    padding:34px 28px;
+    border:1px solid var(--line);
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .svc-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .svc-icon{
+    width:54px; height:54px;
+    border-radius:14px;
+    background:var(--tag);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:20px;
+  }
+  .svc-icon svg{width:28px; height:28px; color:var(--primary-dark);}
+  .svc-card h3{font-size:20px; font-weight:700; margin-bottom:10px;}
+  .svc-card p{color:var(--ink-soft); font-size:15px; line-height:1.6; margin:0;}
+
+  /* ---------- Diferenciais ---------- */
+  .diff-wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .diff-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:22px;}
+  .diff-list li{
+    display:flex; gap:16px; align-items:flex-start;
+    font-size:16px; color:var(--ink-soft); line-height:1.55;
+  }
+  .diff-list li b{color:var(--primary-dark); font-weight:700;}
+  .diff-icon{
+    width:38px; height:38px; flex-shrink:0;
+    border-radius:10px;
+    background:var(--primary);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .diff-icon svg{width:19px; height:19px; color:#fff;}
+  .diff-visual{
+    background:var(--primary-dark);
+    border-radius:28px;
+    padding:44px;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .diff-visual::after{
+    content:"";
+    position:absolute; width:280px; height:280px;
+    background:radial-gradient(circle, rgba(237,162,61,0.35), transparent 70%);
+    top:-80px; right:-80px;
+  }
+  .diff-visual .quote-mark{font-family:'Bricolage Grotesque',sans-serif; font-size:64px; color:var(--accent); line-height:1; opacity:0.7;}
+  .diff-visual p{font-size:20px; line-height:1.55; font-weight:600; position:relative; z-index:1;}
+  .diff-visual .who{margin-top:18px; font-family:'Space Mono',monospace; font-size:12.5px; color:rgba(255,255,255,0.7); position:relative; z-index:1;}
+
+  /* ---------- Reviews ---------- */
+  .review-top{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:40px;
+    margin-bottom:50px;
+    align-items:stretch;
+  }
+  .rating-card{
+    background:var(--primary-dark);
+    color:#fff;
+    border-radius:var(--radius);
+    padding:38px 32px;
+    display:flex; flex-direction:column; justify-content:center; gap:12px;
+  }
+  .rating-card .big{font-family:'Bricolage Grotesque',sans-serif; font-size:56px; font-weight:800;}
+  .rating-card .stars{font-size:20px;}
+  .rating-card .sub{font-family:'Space Mono',monospace; font-size:12.5px; color:rgba(255,255,255,0.75); line-height:1.6;}
+  .rating-card a{
+    margin-top:14px;
+    font-weight:700;
+    font-size:14px;
+    text-decoration:none;
+    color:var(--accent);
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .rating-card a:hover{text-decoration:underline;}
+
+  .testi-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .testi-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:26px;
+    position:relative;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .testi-card::before{
+    content:"";
+    position:absolute; top:-11px; left:26px;
+    width:20px; height:20px; border-radius:50%;
+    background:var(--bg-alt);
+    border:4px solid var(--bg);
+  }
+  .testi-card .stars{font-size:14px;}
+  .testi-card p{font-size:15px; line-height:1.6; color:var(--ink-soft); margin:0; font-style:italic;}
+  .testi-card .name{font-weight:700; font-size:14px; color:var(--primary-dark); font-style:normal;}
+
+  /* ---------- Gallery ---------- */
+  .gallery-line{
+    position:relative;
+    padding-top:20px;
+  }
+  .gallery-line::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background-image:linear-gradient(90deg, var(--line) 50%, transparent 50%);
+    background-size:16px 2px;
+  }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+  }
+  .g-tag{
+    background:var(--panel);
+    border-radius:16px;
+    padding:14px;
+    box-shadow:0 12px 26px -18px rgba(22,48,43,0.35);
+  }
+  .g-tag .ph{
+    aspect-ratio:4/5;
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:11.5px;
+    color:rgba(255,255,255,0.92);
+    padding:14px;
+    line-height:1.5;
+  }
+  .g-tag:nth-child(1) .ph{background:linear-gradient(160deg,var(--primary),#2d6a5c);}
+  .g-tag:nth-child(2) .ph{background:linear-gradient(160deg,var(--accent),var(--accent-dark));}
+  .g-tag:nth-child(3) .ph{background:linear-gradient(160deg,var(--rose),#b85068);}
+  .g-tag:nth-child(4) .ph{background:linear-gradient(160deg,#3a7568,var(--primary-dark));}
+  .g-tag .cap{margin-top:10px; font-size:13px; font-weight:700; text-align:center; color:var(--primary-dark);}
+
+  /* ---------- Location ---------- */
+  .loc-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .loc-info{
+    background:var(--primary-dark);
+    color:#fff;
+    padding:48px 42px;
+    display:flex; flex-direction:column; gap:26px;
+  }
+  .loc-info h3{color:#fff; font-size:24px; font-weight:700;}
+  .loc-row{display:flex; gap:14px; align-items:flex-start; font-size:15px; line-height:1.6; color:rgba(255,255,255,0.88);}
+  .loc-row svg{width:20px; height:20px; color:var(--accent); flex-shrink:0; margin-top:2px;}
+  .hours-table{width:100%; border-collapse:collapse; font-size:14px;}
+  .hours-table td{padding:6px 0; color:rgba(255,255,255,0.85); border-bottom:1px solid rgba(255,255,255,0.12);}
+  .hours-table td:last-child{text-align:right; font-family:'Space Mono',monospace; font-size:13px;}
+  .loc-ctas{display:flex; gap:12px; flex-wrap:wrap; margin-top:6px;}
+  .loc-map{min-height:420px;}
+  .loc-map iframe{width:100%; height:100%; min-height:420px; border:0; display:block;}
+
+  /* ---------- Contact form ---------- */
+  .contact-wrap{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:60px;
+    align-items:flex-start;
+  }
+  .form-card{
+    background:var(--panel);
+    border-radius:var(--radius);
+    padding:40px;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+  .field{margin-bottom:18px; display:flex; flex-direction:column; gap:8px;}
+  .field label{font-size:13px; font-weight:700; color:var(--primary-dark);}
+  .field input, .field select, .field textarea{
+    padding:13px 15px;
+    border-radius:10px;
+    border:1.5px solid var(--line);
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    background:var(--bg);
+    color:var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    border-color:var(--primary);
+    outline:none;
+  }
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .form-card .btn{width:100%; justify-content:center; margin-top:6px;}
+  .form-note{font-size:12.5px; color:var(--ink-soft); margin-top:12px; text-align:center;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--primary-dark);
+    color:rgba(255,255,255,0.85);
+    padding:60px 0 26px;
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:36px;
+    border-bottom:1px solid rgba(255,255,255,0.14);
+  }
+  .foot-logo{display:flex; align-items:center; gap:10px; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:22px; color:#fff;}
+  .foot-logo svg{width:26px;height:26px; color:var(--accent);}
+  footer p{font-size:14px; line-height:1.7; color:rgba(255,255,255,0.7); margin-top:14px; max-width:280px;}
+  footer h4{font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
+  footer ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:11px;}
+  footer ul a{text-decoration:none; font-size:14.5px; color:rgba(255,255,255,0.82);}
+  footer ul a:hover{color:#fff;}
+  .social-row{display:flex; gap:12px; margin-top:16px;}
+  .social-row a{
+    width:38px; height:38px; border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .social-row a:hover{background:var(--accent); color:var(--primary-dark);}
+  .social-row svg{width:17px; height:17px;}
+  .bottom-bar{
+    padding-top:24px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:12.5px; color:rgba(255,255,255,0.55);
+  }
+
+  /* ---------- WhatsApp floating button ---------- */
+  .wa-float{
+    position:fixed;
+    right:22px; bottom:22px;
+    z-index:200;
+    display:flex; align-items:center; gap:10px;
+    background:var(--wa);
+    color:#fff;
+    text-decoration:none;
+    padding:14px 20px 14px 14px;
+    border-radius:999px;
+    box-shadow:0 16px 34px -12px rgba(37,211,102,0.6);
+    font-weight:700;
+    font-size:14.5px;
+  }
+  .wa-float svg{width:26px; height:26px;}
+  .wa-float .ring{
+    position:absolute; inset:0;
+    border-radius:999px;
+    box-shadow:0 0 0 0 rgba(37,211,102,0.6);
+    animation:pulse 2.4s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,0.55);}
+    70%{box-shadow:0 0 0 16px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+  }
+  .wa-float span.label{white-space:nowrap;}
+  @media (max-width:640px){
+    .wa-float span.label{display:none;}
+    .wa-float{padding:15px;}
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:980px){
+    .nav-links{display:none;}
+    .nav-cta .btn.btn-ghost{display:none;}
+    .burger{display:flex;}
+    .hero .wrap{grid-template-columns:1fr; gap:70px;}
+    .hero{padding-top:120px;}
+    .tag-cluster{height:420px; max-width:480px; margin:0 auto;}
+    .services-grid{grid-template-columns:1fr 1fr;}
+    .diff-wrap{grid-template-columns:1fr; gap:40px;}
+    .review-top{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:1fr 1fr;}
+    .loc-wrap{grid-template-columns:1fr;}
+    .loc-map{min-height:320px;}
+    .loc-map iframe{min-height:320px;}
+    .contact-wrap{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .band{padding:70px 0;}
+    .services-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:1fr 1fr; gap:14px;}
+    .field-row{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr; gap:30px;}
+    .rating-float{position:static; margin-top:20px; width:fit-content;}
+    .hero-ctas .btn{width:100%; justify-content:center;}
+    .hero-ctas{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="siteHeader">
+  <nav>
+    <a href="#top" class="logo">
+      <svg class="paw" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 8.5c1.1 0 2-1.1 2-2.5S9.6 3.5 8.5 3.5 6.5 4.6 6.5 6s.9 2.5 2 2.5zm7 0c1.1 0 2-1.1 2-2.5S16.6 3.5 15.5 3.5 13.5 4.6 13.5 6s.9 2.5 2 2.5zM4 13c1.1 0 2-1.1 2-2.5S5.1 8 4 8s-2 1.1-2 2.5S2.9 13 4 13zm16 0c1.1 0 2-1.1 2-2.5S21.1 8 20 8s-2 1.1-2 2.5.9 2.5 2 2.5zm-8-1.5c-2.9 0-6 2.3-6 5.4 0 1.7 1.3 2.9 3 2.9.9 0 1.6-.3 2.3-.6.5-.2 1-.4 1.7-.4s1.2.2 1.7.4c.7.3 1.4.6 2.3.6 1.7 0 3-1.2 3-2.9 0-3.1-3.1-5.4-6-5.4z"/></svg>
+      Pet Ville
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#localizacao" class="btn btn-ghost">Ver endereço</a>
+      <a href="https://wa.me/5567996983775?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pet%20Ville%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet%20%F0%9F%90%BE" target="_blank" rel="noopener" class="btn btn-primary">Agendar no WhatsApp</a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#servicos">Serviços</a>
+  <a href="#diferenciais">Diferenciais</a>
+  <a href="#avaliacoes">Avaliações</a>
+  <a href="#localizacao">Localização</a>
+  <a href="#contato">Contato</a>
+  <a href="https://wa.me/5567996983775" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:10px;justify-content:center;">Agendar no WhatsApp</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Banho & Tosa · Consultório Veterinário · Dourados/MS</span>
+      <h1>Seu pet merece um lugar que cuida dele <em>como você cuida.</em></h1>
+      <p class="lead">Na Pet Ville, banho, tosa e atendimento veterinário se encontram num só endereço — com uma equipe que trata cada focinho como se fosse da família.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/5567996983775?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pet%20Ville%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet%20%F0%9F%90%BE" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a7.9 7.9 0 0 1-2.3-1.4 8.7 8.7 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4A3.4 3.4 0 0 0 6 9.1a5.9 5.9 0 0 0 1.3 3.2 13.6 13.6 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a href="#avaliacoes" class="btn btn-ghost">Ver avaliações no Google</a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8L2.2 9l6.9-.7z"/></svg>
+          <span class="stars">★★★★★</span> 4,4 no Google · 212 avaliações
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"/><path d="M9.5 12.5l1.8 1.8 3.2-3.6"/></svg>
+          Veterinária responsável: Dra. Francielin Franco — CRMV-MS 6819
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-cluster">
+      <div class="tag tag-a">
+        <div class="swatch">📷 Foto do espaço da loja aqui</div>
+        <div class="cap">Nosso espaço</div>
+      </div>
+      <div class="tag tag-b">
+        <div class="swatch">📷 Foto de um pet feliz pós-banho</div>
+        <div class="cap">Banho & Tosa</div>
+      </div>
+      <div class="tag tag-c">
+        <div class="swatch">📷 Foto do consultório / equipe</div>
+        <div class="cap">Consultório</div>
+      </div>
+      <div class="rating-float">
+        <div class="num">4,4</div>
+        <div class="meta">★★★★★<br>212 AVALIAÇÕES<br>NO GOOGLE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="band" id="servicos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Tudo que seu pet precisa, num só endereço</h2>
+      <p>Da loja ao consultório, cada etapa pensada para o conforto e a saúde do seu animal — e para a sua tranquilidade.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/></svg>
+        </div>
+        <h3>Banho & Tosa</h3>
+        <p>Banho, tosa higiênica e na tesoura, hidratação e todo o capricho que deixa o pet cheiroso e o dono orgulhoso.</p>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.08s">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v3M16 2v3M4 8h16M5 5h14a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1z"/><circle cx="12" cy="14" r="2.5"/></svg>
+        </div>
+        <h3>Consultório Veterinário</h3>
+        <p>Consultas, vacinas e acompanhamento com a Dra. Francielin Franco (CRMV-MS 6819), em cada fase da vida do seu pet.</p>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.16s">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2l1.5 5h9L18 2M4 7h16l-1.5 13.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5z"/></svg>
+        </div>
+        <h3>Loja & Produtos</h3>
+        <p>Ração, petiscos, acessórios e tudo o que você precisa sem sair da loja — com quem entende do assunto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIFERENCIAIS ================= -->
+<section class="band alt" id="diferenciais">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Por que a Pet Ville</span>
+      <h2>Confiança de quem já vive isso todos os dias</h2>
+    </div>
+    <div class="diff-wrap">
+      <ul class="diff-list reveal">
+        <li>
+          <span class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8L2.2 9l6.9-.7z"/></svg></span>
+          <span><b>Nota 4,4 no Google</b>, com mais de 200 avaliações reais de tutores de Dourados.</span>
+        </li>
+        <li>
+          <span class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 12l2 2 4-4M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"/></svg></span>
+          <span><b>Veterinária responsável ativa</b> — Dra. Francielin Franco, CRMV-MS 6819, à frente do consultório.</span>
+        </li>
+        <li>
+          <span class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+          <span><b>Atendimento próximo e humanizado</b> — dono e equipe presentes no dia a dia da loja e do consultório.</span>
+        </li>
+        <li>
+          <span class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11z"/></svg></span>
+          <span><b>Localização central em Dourados</b>, fácil de chegar e com atendimento de segunda a sábado.</span>
+        </li>
+      </ul>
+      <div class="diff-visual reveal">
+        <div class="quote-mark">“</div>
+        <p>Atendimento excelente e preços justos. A proprietária é super atenciosa com todos os clientes, tanto na loja quanto no consultório — recomendo sempre.</p>
+        <div class="who">— PARAFRASEADO DE AVALIAÇÃO REAL NO GOOGLE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVALIAÇÕES ================= -->
+<section class="band" id="avaliacoes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Quem já passou por aqui</span>
+      <h2>O que dizem sobre a Pet Ville</h2>
+      <p>Depoimentos baseados em avaliações reais do Google — sem filtro, você pode conferir todas no link abaixo.</p>
+    </div>
+    <div class="review-top">
+      <div class="rating-card reveal">
+        <div class="big">4,4</div>
+        <div class="stars">★★★★★</div>
+        <div class="sub">212 AVALIAÇÕES NO GOOGLE<br>DOURADOS · MS</div>
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJ3apH9yioiZQRltAiBh6-ZhU" target="_blank" rel="noopener">Ver todas as avaliações →</a>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Depois de ser mal recebida em outro estabelecimento, fui surpreendida na Pet Ville: atenderam meu cachorro com atenção e carinho, mesmo sendo um caso mais delicado. Equipe cuidadosa do início ao fim."</p>
+          <div class="name">Cliente Google — Dourados/MS</div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.08s">
+          <div class="stars">★★★★★</div>
+          <p>"Atendimento excelente, bons profissionais e preço justo. A proprietária é muito atenciosa com todos, tanto na loja quanto no consultório. Recomendo sempre."</p>
+          <div class="name">Cliente Google — Dourados/MS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="band alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Bastidores</span>
+      <h2>O dia a dia por aqui</h2>
+      <p>Espaço reservado para as fotos reais da loja, da equipe e dos pets — é só substituir os quadros abaixo.</p>
+    </div>
+    <div class="gallery-line">
+      <div class="gallery-grid">
+        <div class="g-tag reveal"><div class="ph">📷 Foto: banho e tosa</div><div class="cap">Banho & Tosa</div></div>
+        <div class="g-tag reveal" style="transition-delay:.06s"><div class="ph">📷 Foto: cantinho da loja</div><div class="cap">Nossa loja</div></div>
+        <div class="g-tag reveal" style="transition-delay:.12s"><div class="ph">📷 Foto: pet feliz</div><div class="cap">Clientes de quatro patas</div></div>
+        <div class="g-tag reveal" style="transition-delay:.18s"><div class="ph">📷 Foto: consultório</div><div class="cap">Consultório</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCALIZAÇÃO ================= -->
+<section class="band" id="localizacao">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Venha nos conhecer</span>
+      <h2>Estamos te esperando em Dourados</h2>
+    </div>
+    <div class="loc-wrap reveal">
+      <div class="loc-info">
+        <h3>Pet Ville</h3>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11z"/></svg>
+          <span>R. Cuiabá, 439 — Jardim Climax, Dourados - MS, 79802-030</span>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.4 2.1L8 10.2a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .7a2 2 0 0 1 1.5 2z"/></svg>
+          <span>(67) 99698-3775</span>
+        </div>
+        <table class="hours-table">
+          <tr><td>Segunda a sexta</td><td>08:00 – 18:00</td></tr>
+          <tr><td>Sábado</td><td>08:00 – 12:00</td></tr>
+          <tr><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+        <div class="loc-ctas">
+          <a class="btn btn-primary" href="https://wa.me/5567996983775" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-light" href="https://www.google.com/maps/dir/?api=1&destination=Pet+Ville,+R.+Cuiab%C3%A1,+439,+Jardim+Climax,+Dourados+-+MS" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn btn-light" href="tel:+5567996983775">Ligar agora</a>
+        </div>
+      </div>
+      <div class="loc-map">
+        <iframe src="https://www.google.com/maps?q=Pet+Ville,+R.+Cuiab%C3%A1,+439,+Jardim+Climax,+Dourados+-+MS&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Pet Ville Dourados"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section class="band alt" id="contato">
+  <div class="wrap">
+    <div class="contact-wrap">
+      <div class="sec-head reveal" style="margin-bottom:0;">
+        <span class="eyebrow">Agendamento rápido</span>
+        <h2>Vamos marcar o próximo banho (ou consulta)?</h2>
+        <p>Preencha os campos abaixo e envie direto para o nosso WhatsApp — sem burocracia, sem espera.</p>
+      </div>
+      <form class="form-card reveal" id="contactForm">
+        <div class="field-row">
+          <div class="field">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" required placeholder="Como podemos te chamar?">
+          </div>
+          <div class="field">
+            <label for="pet">Nome do pet</label>
+            <input type="text" id="pet" placeholder="Ex: Thor, Mel...">
+          </div>
+        </div>
+        <div class="field">
+          <label for="servico">Serviço desejado</label>
+          <select id="servico">
+            <option>Banho e Tosa</option>
+            <option>Consulta Veterinária</option>
+            <option>Produtos / Loja</option>
+            <option>Outro assunto</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Mensagem (opcional)</label>
+          <textarea id="msg" rows="3" placeholder="Conte um pouco mais sobre o que você precisa..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a7.9 7.9 0 0 1-2.3-1.4 8.7 8.7 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4A3.4 3.4 0 0 0 6 9.1a5.9 5.9 0 0 0 1.3 3.2 13.6 13.6 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Enviar pelo WhatsApp
+        </button>
+        <p class="form-note">Ao enviar, abriremos o WhatsApp com sua mensagem pronta — você só confirma o envio.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 8.5c1.1 0 2-1.1 2-2.5S9.6 3.5 8.5 3.5 6.5 4.6 6.5 6s.9 2.5 2 2.5zm7 0c1.1 0 2-1.1 2-2.5S16.6 3.5 15.5 3.5 13.5 4.6 13.5 6s.9 2.5 2 2.5zM4 13c1.1 0 2-1.1 2-2.5S5.1 8 4 8s-2 1.1-2 2.5S2.9 13 4 13zm16 0c1.1 0 2-1.1 2-2.5S21.1 8 20 8s-2 1.1-2 2.5.9 2.5 2 2.5zm-8-1.5c-2.9 0-6 2.3-6 5.4 0 1.7 1.3 2.9 3 2.9.9 0 1.6-.3 2.3-.6.5-.2 1-.4 1.7-.4s1.2.2 1.7.4c.7.3 1.4.6 2.3.6 1.7 0 3-1.2 3-2.9 0-3.1-3.1-5.4-6-5.4z"/></svg>
+          Pet Ville
+        </div>
+        <p>Banho, tosa e consultório veterinário em Dourados/MS. Cuidado de verdade, todos os dias.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/petvillems" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="https://wa.me/5567996983775" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>R. Cuiabá, 439 — Jardim Climax, Dourados/MS</li>
+          <li>(67) 99698-3775</li>
+          <li>Seg–Sex 08h–18h · Sáb 08h–12h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <span>© 2026 Pet Ville. Todos os direitos reservados.</span>
+      <span>Feito com carinho para quem cuida de quem não fala, mas ama.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+<a class="wa-float" href="https://wa.me/5567996983775?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pet%20Ville%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet%20%F0%9F%90%BE" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a7.9 7.9 0 0 1-2.3-1.4 8.7 8.7 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c-.1-.1-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4A3.4 3.4 0 0 0 6 9.1a5.9 5.9 0 0 0 1.3 3.2 13.6 13.6 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  <span class="label">Fale conosco</span>
+</a>
+
+<script>
+  // Header shrink on scroll
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // Mobile menu
+  const burger = document.getElementById('burgerBtn');
+  const panel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', () => {
+    const open = panel.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    panel.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', false);
+  }));
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Contact form -> WhatsApp
+  document.getElementById('contactForm').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const pet = document.getElementById('pet').value.trim();
+    const servico = document.getElementById('servico').value;
+    const msg = document.getElementById('msg').value.trim();
+
+    let text = `Olá! Meu nome é ${nome || '(não informado)'}`;
+    if (pet) text += `, meu pet se chama ${pet}`;
+    text += `. Gostaria de agendar: ${servico}.`;
+    if (msg) text += ` Detalhes: ${msg}`;
+
+    const url = `https://wa.me/5567996983775?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener');
+  });
+</script>
+
+</body>
+</html>
